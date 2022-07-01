@@ -13,3 +13,6 @@ docker-compose up
 
 //run tests.py
 docker-compose run --rm app sh -c "python manage.py test"
+
+// check linting of a file
+docker-compose run --rm app sh -c "python manage.py wait_for_db && flake8"
