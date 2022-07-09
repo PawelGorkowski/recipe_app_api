@@ -19,7 +19,6 @@ RUN python -m venv /py && \
     if [ $DEV = "true" ]; \
         then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
-
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
     adduser \
