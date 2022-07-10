@@ -64,27 +64,3 @@ class Recipe(models.Model):
     def __str__(self):
         """Return string representation of the object."""
         return self.title
-
-    # def get_absolute_url(self):
-    #     """Return URL for recipe detail."""
-    #     return f"/recipe/{self.id}"
-
-    # def get_total_price(self):
-    #     """Return total price of the recipe."""
-    #     return self.price * self.time_minutes
-
-    # def get_total_time(self):
-    #     """Return total time of the recipe."""
-    #     return self.time_minutes
-
-    # def get_ingredients(self):
-    #     """Return list of ingredients."""
-    #     return self.ingredient_set.all()
-
-    # def get_steps(self):
-    #     """Return list of steps."""
-    #     return self.step_set.all()
-
-    # def get_tags(self):
-    #     """Return list of tags."""
-    #     return self.tag_set.all()
