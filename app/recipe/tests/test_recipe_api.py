@@ -3,7 +3,6 @@ Tests for recipe APIs.
 """
 
 from decimal import Decimal
-import email
 
 from django.contrib.auth import get_user_model
 from django.test import TestCase
@@ -179,7 +178,7 @@ class PrivateRecipeApiTests(TestCase):
 
         payload = {"user": new_user.id}
         url = detail_url(recipe.id)
-        res = self.client.patch(url, payload)
+        self.client.patch(url, payload)
 
         recipe.refresh_from_db()
         self.assertEqual(recipe.user, self.user)
